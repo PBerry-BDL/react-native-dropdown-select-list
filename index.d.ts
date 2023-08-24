@@ -1,6 +1,6 @@
 
 import type * as React from "react";
-import {ViewStyle} from 'react-native';
+import { ViewStyle, TextStyle } from 'react-native';
 
 export interface SelectListProps  {
     /**
@@ -21,7 +21,7 @@ export interface SelectListProps  {
     /**
     *  	Additional styles for text of select box
     */
-    inputStyles?: ViewStyle,
+    inputStyles?: TextStyle,
 
     /**
     *  	Additional styles for dropdown scrollview
@@ -36,7 +36,7 @@ export interface SelectListProps  {
     /**
     * Additional styles for list items text
     */
-    dropdownTextStyles?: ViewStyle,
+    dropdownTextStyles?: TextStyle,
 
     /**
     * Maximum height of the dropdown wrapper to occupy
@@ -51,7 +51,7 @@ export interface SelectListProps  {
     /**
     * The default option of the select list
     */
-    defaultOption: { key: any, value: any },
+    defaultOption?: { key: any, value: any },
 
     /**
     * Pass any JSX to this prop like Text, Image or Icon to show instead of search icon
@@ -71,7 +71,7 @@ export interface SelectListProps  {
     /**
     * set to false if you dont want to use search functionality
     */
-     searchPlaceholder?: string,
+    searchPlaceholder?: string,
 
     /**
     * Trigger an action when option is selected
@@ -86,7 +86,7 @@ export interface SelectListProps  {
     /**
     * set this to change the default search failure text
     */
-     notFoundText?: string,
+    notFoundText?: string,
 
     /**
     * Additional styles for disabled list item
@@ -96,7 +96,7 @@ export interface SelectListProps  {
     /**
     * Additional styles for disabled list items text
     */
-    disabledTextStyles?: ViewStyle,
+    disabledTextStyles?: TextStyle,
 
     /**
     * What to store inside your local state (key or value)
@@ -108,7 +108,7 @@ export interface SelectListProps  {
     */
     dropdownShown?: boolean,
 
-     /**
+    /**
     *  Pass any JSX to this prop like Text, Image or Icon to show instead of close icon
     */
     closeicon?: JSX.Element,
@@ -139,10 +139,10 @@ export interface MultipleSelectListProps  {
     /**
     *  	Additional styles for text of select box
     */
-    inputStyles?: ViewStyle,
+    inputStyles?: TextStyle,
 
     /**
-    *  	Additional styles for dropdown scrollview
+    *  	Additional styles for dropdown scrollview 
     */
     dropdownStyles?:ViewStyle,
 
@@ -154,7 +154,7 @@ export interface MultipleSelectListProps  {
     /**
     * Additional styles for list items text
     */
-    dropdownTextStyles?: ViewStyle,
+    dropdownTextStyles?: TextStyle,
 
     /**
     * Maximum height of the dropdown wrapper to occupy
@@ -169,7 +169,7 @@ export interface MultipleSelectListProps  {
     /**
     * The default option of the select list
     */
-    defaultOption: { key: any, value: any },
+    defaultOption?: { key: any, value: any },
 
     /**
     * Pass any JSX to this prop like Text, Image or Icon to show instead of search icon
@@ -199,9 +199,9 @@ export interface MultipleSelectListProps  {
     /**
     * set text of label which appears soon after multiple values are selected
     */
-     label?: string,
+    label?: string,
 
-     /**
+    /**
     * set fontFamily of whole component Text 
     */
     fontFamily?: string,
@@ -209,9 +209,9 @@ export interface MultipleSelectListProps  {
     /**
     * set this to change the default search failure text
     */
-     notFoundText?: string,
+    notFoundText?: string,
 
-     /**
+    /**
     * Additional styles for disabled list item
     */
     disabledItemStyles?: ViewStyle,
@@ -219,7 +219,7 @@ export interface MultipleSelectListProps  {
     /**
     * Additional styles for disabled list items text
     */
-    disabledTextStyles?: ViewStyle,
+    disabledTextStyles?: TextStyle,
 
 
     /**
@@ -235,20 +235,20 @@ export interface MultipleSelectListProps  {
     /**
     * What to store inside your local state (key or value)
     */
-     save?: 'key' | 'value',
+    save?: 'key' | 'value',
     
-     /**
+    /**
     * Control the dropdown with this prop
     */
     dropdownShown?: boolean,
 
-     /**
+    /**
     *  Pass any JSX to this prop like Text, Image or Icon to show instead of close icon
     */
     closeicon?: JSX.Element,
 
     
-      /**
+    /**
     * Additional styles for multiselect badge
     */
     badgeStyles?: ViewStyle,
@@ -261,7 +261,7 @@ export interface MultipleSelectListProps  {
     /**
     * Additional styles for label
     */
-     labelStyles?: ViewStyle,
+    labelStyles?: TextStyle,
 }
 
 declare class MultipleSelectList extends React.Component<MultipleSelectListProps> {}
